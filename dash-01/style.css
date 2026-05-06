@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/*
+icons
+search
+home
+apps
+layers
+assignment
+bar_chart
+*/
+
+/* https://github.com/jrcampos82/web1-2026-dash-01.git */
+
+:root {
+  /* Icons */
+  --icon-color-default: #777;
+  --icon-color-search: #626a6e;
+  /* Header */
+  --bg-header: #438afc;
+
+  /* perfil */
+  --bg-perfil: #3761b7;
+
+  /* Sidebar */
+  --primary-color: #448aff;
+  --bg-sidebar: #ffffff;
+  --text-primary: #555555;
+  --text-muted: #999999;
+  --section-title: #448aff;
+  --border-color: #eeeeee;
+  --hover-bg: #f8f9fa;
+  --active-shadow: 0 4px 15px rgba(68, 138, 255, 0.3);
+  --bg-page: #f5f5f5;
+
+  /* Content */
+  --bg-content: #ffb2b2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg-page);
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  height: 100vh;
+  width: 80%;
+}
+
+header {
+  height: 70px;
+  background-color: var(--bg-header);
+  width: 100%;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg-header);
+  height: 150px;
+  width: 100%;
+}
+
+.box1 {
+  width: 280px;
+  background-color: #438afc;
+  background-image: linear-gradient(rgba(77, 110, 255, 0.5), rgba(47, 118, 248, 0.5)), url('imagens/montanha.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sub-header .box1 span {
+  color: var(--bg-page);
+  font-size: 18px;
+}
+
+.sub-header .box1 img {
+  border-radius: 50%;
+  width: 75px;
+  margin-bottom: 10px;
+} 
+
+.sub-header .box1 .material-icons {
+  color: var(--bg-page);
+  font-size: 15px;
+}
+
+.box2 {
+  width: calc(100% - 280px);
+  background-color: var(--bg-header);
+  background-image: linear-gradient(rgba(77, 110, 255, 0.5), rgba(47, 118, 248, 0.5)), url('imagens/fundo_azul.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  color: var(--bg-page);
+}
+
+.box2 .left {
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40px;
+  min-width: 150px;
+}
+
+.box2 .left h2 {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.box2 .left h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.box2 .right {
+  align-items: center;
+  justify-content: end;
+  margin-right: 40px;
+  min-width: 200px;
+}
+
+.box2 .right h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.box2 .right .material-icons {
+  font-size: 18px;
+}
+
+
+
+main {
+  display: flex;
+}
+
+.sidebar {
+  min-width: 280px;
+  background-color: var(--bg-sidebar);
+  padding: 30px 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  height: 800px;
+  /* overflow-y: auto; */
+}
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+------------SEARCH BOX--------------
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 7px;
+  margin-bottom: 25px;
+}
+
+.search-box .material-icons {
+  font-size: 24px;
+  color: var(--icon-color-search);
+}
+
+.search-box input {
+  width: 200px;
+  margin-left: 5px;
+  font-size: 14px;
+  height: 30px;
+  color: var(--text-primary);
+  border: none;
+  outline: none;
+}
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+------------MENU SECTION------------
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+.menu-section {
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.menu-section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--section-title);
+    margin-bottom: 20px;
+}
+
+.menu-section ul {
+    list-style: none;
+    display: flex;
+    padding-left: 10px;
+}
+
+.menu-section .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.menu-section .menu-item p {
+  margin-left: auto;
+  padding-right: 10px;
+  color: var(--text-primary);
+}
+
+.menu-section .menu-item .material-icons{
+  margin-right: 5px;
+  color: var(--icon-color-default);
+}
+
+.menu-section .menu-item .text{
+  color: var(--text-primary);
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+---------------HOVER----------------
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+.menu-section .menu-item:hover {
+  color: var(--hover-bg);
+  background-color: var(--bg-header);
+}
+
+.menu-section .menu-item:hover .text {
+  color: var(--hover-bg);
+  background-color: var(--bg-header);
+}
+
+.menu-section .menu-item:hover .material-icons {
+  color: var(--hover-bg);
+  background-color: var(--bg-header);
+}
+
+.menu-section .menu-item:hover p {
+  color: var(--hover-bg);
+  background-color: var(--bg-header);
+}
+
+
+
+
+
+
+.content {
+  width: 100%;
+  background-color: var(--bg-content);
+  padding: 30px;
+  min-height: 100%;
+}
