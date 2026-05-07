@@ -57,9 +57,52 @@ body {
 }
 
 header {
+  display: flex;
   height: 70px;
   background-color: var(--bg-header);
   width: 100%;
+}
+
+.header-left {
+  display: flex;
+  width: 280px;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--bg-page);
+}
+
+.header-left h2 {
+  font-size: 22px;
+  padding-right: 25px;
+  font-weight: 400;
+}
+
+.header-middle {
+  display: flex;
+  width: calc(100% - 520px);
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: var(--bg-page);
+}
+
+.header-right {
+  display: flex;
+  width: 240px;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--bg-page);
+  padding-right: 25px;
+  justify-content:space-between;
+}
+
+
+
+.header-right img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .sub-header {
@@ -82,9 +125,15 @@ header {
   flex-direction: column;
 }
 
+.sub-header .box1 .user-info {
+  display: flex;
+}
+
 .sub-header .box1 span {
   color: var(--bg-page);
   font-size: 18px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .sub-header .box1 img {
@@ -129,7 +178,7 @@ header {
   align-items: center;
   justify-content: end;
   margin-right: 40px;
-  min-width: 200px;
+  min-width: 150px;
 }
 
 .box2 .right h3 {
