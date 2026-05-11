@@ -35,7 +35,8 @@ bar_chart
   --icon-color-indigo: #8088c8;
   --icon-color-red: #eb5c65;
   --icon-color-green: #1db265;
-  --icon-color-blue: #3e40d8;
+  --icon-color-blue: #2e89dd;
+  --icon-color-white: #f8f8f8;
   
   /* Content */
   --bg-content: #ffb2b2;
@@ -48,6 +49,11 @@ bar_chart
   font-family: "Poppins", sans-serif;
 }
 
+h2 {
+  font-size: 23px;
+  font-weight: 600;
+}
+
 h4 {
   font-size: 18px;
   font-weight: 500;
@@ -57,6 +63,20 @@ h4 {
 h5 {
   font-weight: 400;
   color: var(--text-muted)
+}
+
+h6 {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--bg-page);
+}
+
+.border-bottom {
+  border-bottom: 2px solid var(--border-color);
+}
+
+.border-left {
+  border-left: 2px solid var(--border-color);
 }
 
 .icon-indigo {
@@ -72,6 +92,18 @@ h5 {
   color: var(--icon-color-blue);
 }
 
+.icon-white {
+  color: var(--icon-color-white)
+}
+
+.bg-green {
+  background-color: var(--icon-color-green) !important;
+}
+
+.bg-blue {
+  background-color: var(--icon-color-blue) !important;
+}
+
 body {
   background-color: var(--bg-page);
   display: flex;
@@ -83,6 +115,12 @@ body {
   height: 100vh;
   width: 80%;
 }
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+---------------HEADER---------------
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
 
 header {
   display: flex;
@@ -125,8 +163,6 @@ header {
   justify-content:space-between;
 }
 
-
-
 .header-right img{
   width: 50px;
   height: 50px;
@@ -140,6 +176,12 @@ header {
   height: 150px;
   width: 100%;
 }
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+--------------BOXES----------------
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
 
 .box1 {
   width: 280px;
@@ -194,16 +236,6 @@ header {
   min-width: 150px;
 }
 
-.box2 .left h2 {
-  font-size: 23px;
-  font-weight: 600;
-}
-
-.box2 .left h4 {
-  font-size: 15px;
-  font-weight: 400;
-}
-
 .box2 .right {
   align-items: center;
   justify-content: end;
@@ -221,10 +253,15 @@ header {
 }
 
 
-
 main {
   display: flex;
 }
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+------------SIDE BAR---------------
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
 
 .sidebar {
   min-width: 280px;
@@ -346,18 +383,12 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 .content {
   width: 100%;
   padding: 30px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .content .card1 {
-  border: 1px solid red;
-  width: 100%;
-}
-
-.content .card1 .statistics {
-  background-color: var(--bg-sidebar);
-  width: 400px;
-  display: flex;
-  flex-wrap: wrap;
+  width: 30%;
 }
 
 .content .card1 .info {
@@ -368,20 +399,108 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
   justify-content: space-around;
 }
 
+
 .content .card1 .info .icon {
   font-size: 32px;
- 
 }
 
-.content .card1 .info .box02 {
-  
+.content .card1 .statistics {
+  background-color: var(--bg-sidebar);
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content .card2 {
+  width: 30%;
+}
+
+.content .card2 .info {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  justify-content: space-around;
+}
+
+.content .card2 .info .icon {
+  font-size: 32px;
+}
+
+.content .card2 .statistics {
+  background-color: var(--bg-sidebar);
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content .card3 {
+  width: 30%;
+}
+
+.content .card3 .info-full {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.content .card3 .info2 {
+  display: flex;
+  background-color: var(--icon-color-blue);
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  justify-content: space-around;
 }
 
 
-
-.content .card1 .info .icon .box02 {
+.content .card3 .statistics-vertical {
+  width: 400px;
   display: flex;
   flex-direction: column;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.content .card3 .statistics-vertical .info-full {
+  display: flex;
   align-items: center;
-  gap: 5px
+  border-radius: 4px;
+  overflow: hidden;
+  height: 80px;
+}
+
+.content .card3 .statistics-vertical .info-full .box01 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.content .card3 .statistics-vertical .info-full .box02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  height: 100%
+}
+
+.content .card3 .statistics-vertical .info-full .box02 h4,
+.content .card3 .statistics-vertical .info-full .box02 h5 {
+  color: var(--icon-color-white) !important;
+  margin: 0;
+  line-height: 2;
+}
+
+.content .card3 .statistics-vertical .info-full .box02 {
+  width: 300px;
+}
+
+.content .card3 .statistics-vertical .info-full .icon {
+  font-size: 32px;
 }
